@@ -19,6 +19,7 @@
 		3AD6EE3418A6CAEE0069B523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6EE3218A6CAEE0069B523 /* InfoPlist.strings */; };
 		3AD6EE3618A6CAEE0069B523 /* LightArray_ControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6EE3518A6CAEE0069B523 /* LightArray_ControllerTests.m */; };
 		3AD6EE4118A6D0340069B523 /* LightArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6EE4018A6D0340069B523 /* LightArray.m */; };
+		3AD6EE4318A6D8AD0069B523 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6EE4218A6D8AD0069B523 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3AD6EE3518A6CAEE0069B523 /* LightArray_ControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightArray_ControllerTests.m; sourceTree = "<group>"; };
 		3AD6EE3F18A6D0340069B523 /* LightArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightArray.h; sourceTree = "<group>"; };
 		3AD6EE4018A6D0340069B523 /* LightArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightArray.m; sourceTree = "<group>"; };
+		3AD6EE4218A6D8AD0069B523 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD6EE4318A6D8AD0069B523 /* IOKit.framework in Frameworks */,
 				3AD6EE0C18A6CAEE0069B523 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +101,7 @@
 		3AD6EE0A18A6CAEE0069B523 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AD6EE4218A6D8AD0069B523 /* IOKit.framework */,
 				3AD6EE0B18A6CAEE0069B523 /* Cocoa.framework */,
 				3AD6EE2A18A6CAEE0069B523 /* XCTest.framework */,
 				3AD6EE0D18A6CAEE0069B523 /* Other Frameworks */,

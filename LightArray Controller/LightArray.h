@@ -14,8 +14,18 @@
 #include <IOKit/serial/ioss.h>
 #include <sys/ioctl.h>
 
-@interface LightArray : NSObject
+@interface LightArray : NSObject {
+	int serialFileDescriptor; // file handle to the serial port
+	bool readThreadRunning;
+    struct termios gOriginalTTYAttrs;
+	NSTextStorage *storage;
+}
 
 - (void) start;
+
+- (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
+
+- (void) listSerialPorts;
+
 
 @end

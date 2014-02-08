@@ -18,6 +18,7 @@
 		3AD6EE2C18A6CAEE0069B523 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD6EE0B18A6CAEE0069B523 /* Cocoa.framework */; };
 		3AD6EE3418A6CAEE0069B523 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6EE3218A6CAEE0069B523 /* InfoPlist.strings */; };
 		3AD6EE3618A6CAEE0069B523 /* LightArray_ControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6EE3518A6CAEE0069B523 /* LightArray_ControllerTests.m */; };
+		3AD6EE4118A6D0340069B523 /* LightArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD6EE4018A6D0340069B523 /* LightArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		3AD6EE3118A6CAEE0069B523 /* LightArray ControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LightArray ControllerTests-Info.plist"; sourceTree = "<group>"; };
 		3AD6EE3318A6CAEE0069B523 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3AD6EE3518A6CAEE0069B523 /* LightArray_ControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightArray_ControllerTests.m; sourceTree = "<group>"; };
+		3AD6EE3F18A6D0340069B523 /* LightArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightArray.h; sourceTree = "<group>"; };
+		3AD6EE4018A6D0340069B523 /* LightArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				3AD6EE1D18A6CAEE0069B523 /* AppDelegate.h */,
 				3AD6EE1E18A6CAEE0069B523 /* AppDelegate.m */,
+				3AD6EE3F18A6D0340069B523 /* LightArray.h */,
+				3AD6EE4018A6D0340069B523 /* LightArray.m */,
 				3AD6EE2018A6CAEE0069B523 /* MainMenu.xib */,
 				3AD6EE2318A6CAEE0069B523 /* Images.xcassets */,
 				3AD6EE1218A6CAEE0069B523 /* Supporting Files */,
@@ -252,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD6EE4118A6D0340069B523 /* LightArray.m in Sources */,
 				3AD6EE1F18A6CAEE0069B523 /* AppDelegate.m in Sources */,
 				3AD6EE1818A6CAEE0069B523 /* main.m in Sources */,
 			);

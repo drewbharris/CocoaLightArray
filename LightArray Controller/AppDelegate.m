@@ -13,6 +13,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    LightArray *lightArray = [[LightArray alloc] init];
+
+    [lightArray start];
+
 }
 
 @end

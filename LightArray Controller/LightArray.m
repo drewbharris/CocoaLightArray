@@ -12,7 +12,13 @@
 
 - (void) start {
     NSLog(@"starting app");
-    [self listSerialPorts];
+    
+    NSArray * ports = [self getSerialPorts];
+    
+    NSLog(@"serial ports: ");
+    for (NSString * port in ports) {
+        NSLog(@"%@", port);
+    }
 }
 
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate {
@@ -110,9 +116,11 @@
 	return errorMessage;
 }
 
-- (void) listSerialPorts {
+- (NSArray *) getSerialPorts {
 	io_object_t serialPort;
 	io_iterator_t serialPortIterator;
+    
+    NSMutableArray *ports = [NSMutableArray array];
 	
 	// ask for all the serial ports
 	IOServiceGetMatchingServices(kIOMasterPortDefault, IOServiceMatching(kIOSerialBSDServiceValue), &serialPortIterator);
@@ -120,11 +128,12 @@
 	// loop through all the serial ports and add them to the array
 	while ((serialPort = IOIteratorNext(serialPortIterator))) {
         NSString * port = CFBridgingRelease(IORegistryEntryCreateCFProperty(serialPort, CFSTR(kIOCalloutDeviceKey),  kCFAllocatorDefault, 0));
-        NSLog(port);
-
+        [ports addObject:port];
 	}
 
 	IOObjectRelease(serialPortIterator);
+    
+    return [NSArray arrayWithArray:ports];
 }
 
 @end

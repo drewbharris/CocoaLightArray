@@ -25,7 +25,7 @@
 
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
 
-- (void) listSerialPorts;
+- (NSArray *) getSerialPorts;
 
 
 @end

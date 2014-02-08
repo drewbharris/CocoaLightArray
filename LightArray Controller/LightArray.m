@@ -13,12 +13,18 @@
 - (void) start {
     NSLog(@"starting app");
     
+    speed_t baudRate = 37600;
     NSArray * ports = [self getSerialPorts];
     
     NSLog(@"serial ports: ");
     for (NSString * port in ports) {
         NSLog(@"%@", port);
     }
+    
+    values = [NSMutableArray arrayWithObjects:@0, @0, @0, @0, @0, nil];
+    
+    NSString * outString = [self valuesToString];
+    NSLog(@"%@", outString);
 }
 
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate {
@@ -134,6 +140,28 @@
 	IOObjectRelease(serialPortIterator);
     
     return [NSArray arrayWithArray:ports];
+}
+
+- (NSString *) valuesToString {
+    NSMutableString * outString = [NSMutableString stringWithString:@"["];
+    for (int i = 0; i < [values count]; i++)
+    {
+        [outString appendString:[[values objectAtIndex:i] stringValue]];
+        if (i != ([values count] - 1)) {
+            [outString appendString: @","];
+        }
+    }
+    [outString appendString: @"]"];
+    return outString;
+}
+
+// send a string to the serial port
+- (void) writeString: (NSString *) str {
+	if(serialFileDescriptor!=-1) {
+		write(serialFileDescriptor, [str cStringUsingEncoding:NSUTF8StringEncoding], [str length]);
+	} else {
+		NSLog(@"ERROR: serial port not open");
+	}
 }
 
 @end

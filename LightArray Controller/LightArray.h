@@ -18,14 +18,16 @@
 	int serialFileDescriptor; // file handle to the serial port
 	bool readThreadRunning;
     struct termios gOriginalTTYAttrs;
-	NSTextStorage *storage;
+	NSTextStorage * storage;
+    NSMutableArray * values;
 }
 
 - (void) start;
 
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
-
 - (NSArray *) getSerialPorts;
+- (NSString *) valuesToString;
+- (void) writeString: (NSString *)str;
 
 
 @end
